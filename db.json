@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "type": "Bicycles",
+      "name": "Kryo X26 MTB – Model K",
+      "price": "$350.00",
+      "image": "b1.jpg"
+    },
+    {
+      "id": "2",
+      "type": "Bicycles",
+      "name": "Kryo X26 MTB – Model X",
+      "price": "$350.00",
+      "image": "b2.jpg"
+    },
+    {
+      "id": "3",
+      "type": "Bicycles",
+      "name": "Kryo X26 MTB – Model Y",
+      "price": "$350.00",
+      "image": "b3.jpg"
+    },
+    {
+      "id": "4",
+      "type": "Bicycles",
+      "name": "Kryo X26 MTB – Model Z",
+      "price": "$350.00",
+      "image": "b4.jpg"
+    }
+  ]
+}

@@ -1,13 +1,203 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#bgImage {
+    height: 765px;
+    width: 100%;
+    margin-top: -150px;
+    z-index: 0;
 }
+
+#blackdiv {
+    margin-top: -800px;
+    height: 797px;
+    width: 50%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+
+}
+
+#reddiv {
+    margin-top: -814.5px;
+    height: 797px;
+    width: 50%;
+    background-color: red; 
+    opacity: 0.5;
+    margin-left: 631px; 
+    z-index: 1;
+}
+
+
+
+/* ==============================================================NAVBAR=================================== */
+
+#mainnav{
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+
+#mainnav ul {
+    list-style-type: none !important; /* Add !important to increase specificity */
+    text-decoration: none; /* This property only applies to anchor elements */
+    display: flex;
+    justify-content: center;
+    padding: px;
+}
+
+#mainnav ul li {
+    padding: 14px;
+}
+
+#mainnav ul li a {
+    color: white;
+    font-size: 14.8px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Apply text-decoration to anchor elements */
+}
+
+
+/* ==============================================================NAVBAR=================================== */
+
+#logo{
+    position: absolute ;
+    z-index: 3;
+    max-width: 85px;
+    margin-left: 34px;
+    margin-top: 10px;
+}
+
+
+#brandname{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-weight: 360;
+    font-family: "Racing Sans One", sans-serif;
+    margin-top: 35px;
+    margin-left: 43px;
+}
+
+
+#subtitle{
+    position: absolute;
+    color: white;
+    z-index: 3;
+    margin-top: 120px;
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 65px;
+    margin-left: 45px;
+}
+
+#specifications{
+    z-index: 3;
+    position: absolute;
+    color: #ffffff;
+    margin-top: 305px;
+    font-size: 22px;
+    margin-left: 36px;
+    padding: 10px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+#specs{
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 31px;
+    position: absolute;
+    color: white;
+    z-index: 2;
+    margin-top: 350px;
+    
+    
+}
+
+#specs div{
+    padding: 5px;
+}
+
+#bullseye{
+    margin: 9px;
+}
+
+
+#buynow{
+    position: absolute;
+    z-index: 3;
+    /* width: 30px; */
+    padding: 9px 15px 9px 15px;
+    background-color: #df453e;
+    margin-top: -119px;
+    margin-left: 100px;
+    color: white;
+    border: none;
+}
+
+#newarrivals{
+    /* position: absolute; */
+    font-family: "Racing Sans One", sans-serif;
+    color: #161616;
+    font-size: 65px;
+    margin-top: 130px;
+    
+}
+
+#products
+{
+    margin-top: 27px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#proitems
+{
+    padding: 10px;
+    
+    /* border: 2px solid grey; */
+    
+    
+}
+
+#proitems img{
+    max-width: 270px;
+}
+
+#product-details{
+    
+}
+
+#biketype{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -220px;
+}
+
+#bikename{
+    font-family: "Racing Sans One", sans-serif;
+    margin-left: -100px;
+    margin-top: -14px;
+    
+}
+
+#bikeprice{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -220px;
+    margin-top: 3px;
+}
+
+#bikestars{
+    margin-top: -14px;
+    margin-left: -203px;
+}
+
+
