@@ -234,13 +234,43 @@ const Home = () => {
         <div id="kryo1div" >
           <div > <h1 id="lightweight">Light weight</h1>
             <p id="kryo1para">
-              Lorem ipsum dolor sit amet, consectetur adipiscing.<br/>  Ut elit tellus, 
-          luctus nec ullamcorper mattis, pulvinar.</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing.<br />  Ut elit tellus,
+              luctus nec ullamcorper mattis, pulvinar.</p>
             <img id="kryo1" src="/images/specification1.jpg" />
 
           </div>
-          <div > <img id="kryo2" src="/images/specification2.jpg" /> </div>
+
+          <div id="kryo2div">
+
+            <div >
+              <h1 id="lightweight2">Lifetime Warranty</h1>
+              <p id="kryo1para2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing.<br />  Ut elit tellus,
+                luctus nec ullamcorper mattis, pulvinar.</p>
+
+              <img id="kryo2" src="/images/specification2.jpg" /> </div>
+          </div>
         </div>
+      </center>
+
+
+      <center>
+
+        <div>
+          <div>
+            <h2 id="kryo3para" >Biggest Service Network</h2>
+            <img id="kryo3" src="/images/specification3.jpg"  />
+          </div>
+          <div>
+            <h2 id="kryo4para" >99% Assembled Delivery</h2>
+            <img id="kryo4" src="/images/specification4.jpg"  />
+          </div>
+          <div>
+            <h2 id="kryo5para" >Free First Bike Service</h2>
+            <img id="kryo5" src="/images/specification5.jpg"  />
+          </div>
+        </div>
+
       </center>
 
 

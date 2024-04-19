@@ -398,7 +398,7 @@
     color: white;
     z-index: 6;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 235px;
     margin-left: 100px;
     font-weight: 700;
 }
@@ -433,8 +433,86 @@
 #lightweight{
     position: absolute;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 190px;
     z-index: 6;
     font-family: "Racing Sans One", sans-serif;
     color: white;
+    font-weight: 500;
+}
+
+
+#lightweight2{
+    position: absolute;
+    /* margin-left: 100px; */
+    margin-top: 190px;
+    z-index: 6;
+    font-family: "Racing Sans One", sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+
+
+#kryo1para2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    z-index: 6;
+    position: absolute;
+    margin-top: 235px;
+    margin-left: px;
+    font-weight: 700;
+}
+
+
+
+#kryo3para{
+    margin-left: 85px;
+    margin-top: 110px;
+    z-index: 5;
+    color: white;
+    position: absolute;
+    font-family: "Racing Sans One", sans-serif ;
+    font-weight: 500;
+}
+#kryo3{
+    scale: 0.35;
+    margin-left: -788px;
+    margin-top: -190px;
+    filter: brightness(40%);
+}
+
+#kryo4{
+    scale: 0.35;
+    margin-left: -525px;
+    margin-top: -544.5px;
+    position: absolute;
+    filter: brightness(40%);
+}
+
+#kryo5{
+    scale: 0.35;
+    margin-left: -130px;
+    margin-top: -545px;
+    position: absolute;
+    filter: brightness(40%);
+    }
+    
+
+#kryo4para{
+   margin-left: 480px;
+   margin-top: -245px;
+    z-index: 5;
+    color: white;
+    position: absolute;
+    font-family: "Racing Sans One", sans-serif ;
+    font-weight: 500;
+}
+#kryo5para{
+    margin-left: 880px;
+    margin-top: -245px;
+    z-index: 5;
+    color: white;
+    position: absolute;
+    font-family: "Racing Sans One", sans-serif ;
+    font-weight: 500;
 }
