@@ -28,5 +28,36 @@
       "price": "$350.00",
       "image": "b4.jpg"
     }
+  ],
+  "accessories": [
+    {
+      "id": "1",
+      "type1": "Accessories",
+      "name1": "Bicycle Gloves Blue",
+      "price1": "$27.00 – $35.00",
+      "image1": "g1.jpg"
+    },
+    {
+      "id": "2",
+      "type1": "Accessories",
+      "name1": "Bicycle Gloves Gold",
+      "price1": "$30.00 – $50.00",
+      "image1": "g2.jpg"
+    },
+    {
+      "id": "4",
+      "type1": "Accessories",
+      "name1": "Bicycle Gloves Pink",
+      "price1": "$25.00 – $32.00",
+      "image1": "g3.jpg"
+    },
+    {
+      "id": "4",
+      "type1": "Accessories",
+      "name1": "Bicycle Gloves Red",
+      "price1": " $92.00 – $98.00",
+      "image1": "g4.jpg"
+    }
+
   ]
 }

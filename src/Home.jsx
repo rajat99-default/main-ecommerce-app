@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const Home = () => {
 
   const [mydata, setMydata] = useState([]);
+  const [mydata2, setMydata2] = useState([]);
 
   // const dispatch= useDispatch();
 
@@ -17,9 +18,16 @@ const Home = () => {
       setMydata(res.data);
     })
   }
+  const loadData2 = () => {
+    let url = "http://localhost:4000/accessories";
+    axios.get(url).then((res) => {
+      setMydata2(res.data);
+    })
+  }
 
   useEffect(() => {
     loadData();
+    loadData2();
   }, []);
 
   const productAns = mydata.map((key) => {
@@ -39,6 +47,33 @@ const Home = () => {
             <i class="fa fa-star-o" aria-hidden="true"></i>
           </div>
           <p id="bikeprice" >{key.price}</p>
+        </div>
+      </div>
+    );
+  });
+  const productAns2 = mydata2.map((key) => {
+    return (
+      <div id="proitems1"> {/* Add container div */}
+        <img src={"images/" + key.image1} />
+        <br />
+        <div id="product-details1"> {/* Container for name and price */}
+          <p id="biketype1" >{key.type1}</p>
+          <br />
+          <p id="bikename1" >{key.name1}</p>
+          <br />
+          <div id="bikestars1" ><i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          </div>
+          <p id="bikeprice1" >{key.price1}</p>
+          <div  id="sizes" >
+
+          <button id="L" >&nbsp;L&nbsp;</button>
+          <button>&nbsp;M&nbsp;</button>
+          <button id="xl" >XL</button>
+          </div>
         </div>
       </div>
     );
@@ -259,19 +294,56 @@ const Home = () => {
         <div>
           <div>
             <h2 id="kryo3para" >Biggest Service Network</h2>
-            <img id="kryo3" src="/images/specification3.jpg"  />
+            <img id="kryo3" src="/images/specification3.jpg" />
           </div>
           <div>
             <h2 id="kryo4para" >99% Assembled Delivery</h2>
-            <img id="kryo4" src="/images/specification4.jpg"  />
+            <img id="kryo4" src="/images/specification4.jpg" />
           </div>
           <div>
             <h2 id="kryo5para" >Free First Bike Service</h2>
-            <img id="kryo5" src="/images/specification5.jpg"  />
+            <img id="kryo5" src="/images/specification5.jpg" />
           </div>
         </div>
 
+
+
       </center>
+
+
+      <center>
+        <div>
+          <h1  id="exploreaccess" >
+            Explore Accessories
+          </h1>
+        </div>
+        <div>
+        <div id="products">
+          {productAns2}
+        </div>
+        </div>
+      </center>
+
+
+
+      <center>
+
+      <button id="viewall" >VIEW ALL</button>
+    
+      </center>
+
+      <center >
+        <div  >
+
+        <h1 id="join" >Join #GoEcoBiking Programme</h1>
+        </div>
+      </center>
+
+  
+        <div>
+          <img id="joinimage"  src="/images/joinprogramme.jpg"   />
+        </div>
+   
 
 
     </>
