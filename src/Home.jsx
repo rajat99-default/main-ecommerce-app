@@ -100,35 +100,35 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
-        
+
         </div>
 
         <div id="rightmountain">
-         <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+          <div>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
-         </div>
+        </div>
 
         <button id="explorenow" >EXPLORE NOW</button>
 
@@ -136,7 +136,7 @@ const Home = () => {
 
 
       <div id="parallax2"  >
-      <h2 id="discollection" >Discover The Collection
+        <h2 id="discollection" >Discover The Collection
         </h2>
 
         <h1 id="mountainbike" >City Bikes</h1>
@@ -146,42 +146,42 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
-        
+
         </div>
 
         <div id="rightmountain">
-         <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+          <div>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
-         </div>
+        </div>
 
         <button id="explorenow" >EXPLORE NOW</button>
       </div>
 
 
       <div id="parallax3"  >
-      <h2 id="discollection" >Discover The Collection
+        <h2 id="discollection" >Discover The Collection
         </h2>
 
         <h1 id="mountainbike" >Speciality Bikes</h1>
@@ -191,42 +191,57 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
-        
+
         </div>
 
         <div id="rightmountain">
-         <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+          <div>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{color:'#df453e'}} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
-         </div>
+        </div>
 
         <button id="explorenow" >EXPLORE NOW</button>
       </div>
-<center>
+      <center>
 
-      <h1 id="whychoose">Why Choose KRYO?</h1>
-</center>
+        <h1 id="whychoose">Why Choose KRYO?</h1>
+      </center>
+
+
+      <center>
+
+        <div id="kryo1div" >
+          <div > <h1 id="lightweight">Light weight</h1>
+            <p id="kryo1para">
+              Lorem ipsum dolor sit amet, consectetur adipiscing.<br/>  Ut elit tellus, 
+          luctus nec ullamcorper mattis, pulvinar.</p>
+            <img id="kryo1" src="/images/specification1.jpg" />
+
+          </div>
+          <div > <img id="kryo2" src="/images/specification2.jpg" /> </div>
+        </div>
+      </center>
 
 
     </>

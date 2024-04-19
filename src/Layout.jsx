@@ -29,6 +29,8 @@ const Layout = () => {
       </ul>
     </nav>
 
+    <i id="cartlogo" class="fa fa-shopping-cart" aria-hidden="true"></i>
+
       <Outlet/>
     
     
