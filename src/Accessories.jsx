@@ -5,8 +5,8 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 
-const Bicycles = () => {
-    const [mydata, setMydata] = useState([]);
+const Accessories = () => {
+    const [mydata2, setMydata2] = useState([]);
     const [sliderValue, setSliderValue] = useState(50);
 
 
@@ -14,41 +14,46 @@ const Bicycles = () => {
         setSliderValue(event.target.value);
     };
 
-    const loadData = () => {
-        let url = "http://localhost:4000/products";
+    const loadData2 = () => {
+        let url = "http://localhost:4000/accessories";
         axios.get(url).then((res) => {
-            setMydata(res.data);
+          setMydata2(res.data);
         })
-    }
+      }
 
     useEffect(() => {
-        loadData();
+        loadData2();
 
     }, []);
 
 
-    const productAnsb = mydata.map((key) => {
+    const productAns2a = mydata2.map((key) => {
         return (
-            <div id="proitemsb"> {/* Add container div */}
-                <img src={"images/" + key.image} />
-                <br />
-                <div id="product-detailsb"> {/* Container for name and price */}
-                    <p id="biketypeb" >{key.type}</p>
-                    <br />
-                    <p id="bikenameb" >{key.name}</p>
-                    <br />
-                    <div id="bikestarsb" ><i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                    </div>
-                    <p id="bikepriceb" >{key.price}</p>
-                </div>
+          <div id="proitems1a"> {/* Add container div */}
+            <img src={"images/" + key.image1} />
+            <br />
+            <div id="product-details1a"> {/* Container for name and price */}
+              <p id="biketype1a" >{key.type1}</p>
+              <br />
+              <p id="bikename1a" >{key.name1}</p>
+              <br />
+              <div id="bikestars1a" ><i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <p id="bikeprice1a" >{key.price1}</p>
+              <div id="sizesa" >
+    
+                <button id="La" >&nbsp;L&nbsp;</button>
+                <button>&nbsp;M&nbsp;</button>
+                <button id="xla" >XL</button>
+              </div>
             </div>
+          </div>
         );
-    });
-
+      });
 
     return (
         <>
@@ -128,9 +133,9 @@ const Bicycles = () => {
 
                 <div id='showbikes'>
                     <Link id='bicycletohome' to="/home">Home</Link>
-                    <div id='bicycletobicycle'  >/ Bicycles</div>
+                    <div id='bicycletobicycle'  >/ Accessories</div>
                     <h1 id='bicyclesheading'>
-                        Bicycles
+                    Accessories
                     </h1>
 
                     <div id='showingresults'  >
@@ -144,14 +149,14 @@ const Bicycles = () => {
                     </select>
 
                     <div id="productsb">
-                        {productAnsb}
+                        {productAns2a}
                     </div>
                 </div>
 
 
 
                 <footer>
-                    <div id="footerb"  >
+                    <div id="footerba"  >
 
                         <img id="hlogo" src="/images/logo-1.png" />
 
@@ -210,4 +215,4 @@ const Bicycles = () => {
     );
 }
 
-export default Bicycles;
+export default Accessories;

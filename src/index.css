@@ -984,13 +984,292 @@
 
 /* ==========================================Bicycles  Main  body================================================ */
 
+
+
+
+#searchbicycles{
+    height: 150px;
+    width: 350px;
+    /* border: 1px solid black; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
+    margin-left: 20px;
+    margin-top: -950px;
+    background-color: white;
+}
+
+#searchbicyclesbox{
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 80px;
+    margin-left: 40px;
+    border: 0.1px solid rgb(224, 200, 200);
+}
+
 #mainbodybicycle{
-    background-color: lightblue;
+    
+    height: 1000px;
+    background-color: #eceff1;  
+}
+
+#searchbicyclesname{
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+
+#searchall{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 10px 15px 10px 15px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-left: 7px;
+    z-index: 4;
+}
+
+
+#filterb{
+    width: 350px;
+    position: absolute;
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    background-color: white;
+    margin-top: 30px;
+    height: 280px;
+}
+
+
+#filterbheading{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+
+#filterbycat{
+    height: 150px;
+    width: 350px;
+    /* border: 1px solid black; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
+    /* margin-left: 20px; */
+    /* margin-top: -950px; */
+    background-color: white;
+    margin-top: 340px;
+    margin-left: 20px;
+}
+
+#filterbycatpara1{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+
+    margin-left: 35px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+
+#filterbycatpara2{
+    color: #df453e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 3px;
+    margin-left: 50px;
+    margin-top: 60px;
+    position: absolute;
+    font-weight: 600;
+}
+
+#filterbycatpara3{
+    color: #df453e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 3px;
+    margin-top: 90px;
+    position: absolute;
+    margin-left: 50px;
 }
 
 
 
+#productsb
+{
+    margin-top: 347px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+#proitemsb
+{
+    padding: 10px;
+    scale: 0.9;
+    
+    /* border: 2px solid grey; */
+    
+    
+}
+
+#proitemsb img{
+    max-width: 208px;
+}
+
+
+#biketypeb{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -0px;
+}
+
+#bikenameb{
+    font-family: "Racing Sans One", sans-serif;
+    margin-left: -px;
+    margin-top: -14px;
+    
+}
+
+#bikepriceb{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -0px;
+    margin-top: 3px;
+}
+
+#bikestarsb{
+    margin-top: -14px;
+    margin-left: -px;
+}
+
+
+#bicyclesheading{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+    color: #df453e;
+    font-size: 85px;
+    margin-left: 100px;
+    margin-top: 120px;
+    position: absolute;
+    z-index: 6;
+}
+
+
+#showbikes{
+    position: absolute;
+    background-color: white;
+    /* border: 1px solid black; */
+
+    height: 949px;
+    width: 800px;
+    margin-left: 420px;
+    margin-top: -640px;
+}
+
+#bicycletohome{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 100px;
+    font-size: 19px;
+    margin-top: 90px;
+    position: absolute;
+
+}
+
+#bicycletobicycle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 150px;
+    font-size: 19px;
+    margin-top: 90px;
+    position: absolute;
+}
+
+
+#showingresults{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+
+#sortfilter{
+    padding: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 295px;
+}
+
+
+#footerb{
+    margin-top: 315px;
+    width: 1263px;
+    height: 450px;
+    background-color: #161616;
+}
 /* ==========================================Bicycles  Main Body================================================ */
 
 
+
+/* ==========================================Accessories  Main Body================================================ */
+
+#proitems1a
+{
+    padding: 10px;
+    
+    /* border: 2px solid grey; */
+    
+    
+}
+
+#proitems1a img{
+    max-width: 208px;
+}
+
+
+#biketype1a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -px;
+}
+
+#bikename1a{
+    font-family: "Racing Sans One", sans-serif;
+    margin-left: -0px;
+    margin-top: -14px;
+    
+}
+
+#bikeprice1a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-left: -px;
+    margin-top: 3px;
+}
+
+#bikestars1a{
+    margin-top: -14px;
+    margin-left: -0px;
+}
+
+
+#footerba{
+    margin-top: 415px;
+    width: 1263px;
+    height: 450px;
+    background-color: #161616;
+}
+
+/* ==========================================Accessories  Main Body================================================ */

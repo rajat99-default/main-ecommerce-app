@@ -2,6 +2,7 @@ import Home from "./Home"
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 import Layout from "./Layout"
 import Bicycles from "./Bicycles"
+import Accessories from "./Accessories"
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
           <Route index element={<Home/>}></Route>
           <Route path="home" element={<Home/>} />
           <Route path="bicycles" element={<Bicycles/>} />
+          <Route path="accessories" element={<Accessories/>} />
         </Route>
       </Routes>
       </BrowserRouter>
