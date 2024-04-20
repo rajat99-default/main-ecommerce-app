@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 #bgImage {
@@ -63,7 +64,6 @@
 }
 
 
-/* ==============================================================NAVBAR=================================== */
 
 #logo{
     position: absolute ;
@@ -84,6 +84,7 @@
     margin-left: 43px;
 }
 
+/* ==============================================================NAVBAR=================================== */
 
 #subtitle{
     position: absolute;
@@ -623,7 +624,374 @@
     scale: 0.6;
     position: absolute;
     margin-left: -325px;
-    margin-top: -200px;
+    margin-top: -150px;
     filter: brightness(40%);
     
 }
+
+
+#joinpara{
+    margin-top: 800px;
+    margin-left: 130px;
+    
+}
+
+#joinpara1{
+    
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 35px;
+}
+
+
+#joinpara2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(116, 110, 110);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#joinprogramme{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 15px 20px 15px 20px;
+    font-weight: 700;
+    margin-top: -90px;
+    margin-left: 920px;
+    z-index: 4;
+}
+
+
+#parallax4 {
+    /* The image used */
+    background-image: url("https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/bicycle-1.jpg");
+    /* Set a specific height */
+    min-height: 700px;
+    margin-top: 100px;
+    /* scale: ; */
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Gradient overlay */
+    position: relative;
+    /* filter: brightness(40%); */
+}
+
+#parallax4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,  #161616 100%);
+}
+
+
+#parallax4h2{
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+    /* margin-top: 100px; */
+    
+    
+    
+}
+
+
+#parallax4h1{
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 55px;
+    color: white;
+    font-weight: 500;
+    margin-top: 25px;
+    
+    
+}
+
+
+#parallax4p{
+    font-weight: 800;
+    color: white;
+    margin-top: 25px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#parallax4text{
+    margin-top: 150px;
+    position: absolute;
+    margin-left: 150px;
+    z-index: 6;
+   
+}
+
+
+#shopnow{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 15px 20px 15px 20px;
+    margin-top: 40px;
+    margin-left: -55px;
+    z-index: 4;
+    /* border: none; */
+}
+
+
+
+
+
+
+
+
+
+
+#mainnavb{
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 10px;
+    z-index: 1000;
+    background-color: #df453e;
+}
+
+
+#mainnavb ul {
+    list-style-type: none !important; /* Add !important to increase specificity */
+    text-decoration: none; /* This property only applies to anchor elements */
+    display: flex;
+    background-color: #df453e;
+    justify-content: center;
+    padding: px;
+}
+
+#mainnavb ul li {
+    padding: 14px;
+    background-color: #df453e;
+}
+
+#mainnavb ul li a {
+    background-color: #df453e;
+    color: white;
+    font-size: 14.8px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Apply text-decoration to anchor elements */
+}
+
+
+#bnavbar{
+    background-color: #df453e;
+}
+
+
+#footer{
+    width: 1263px;
+    height: 450px;
+    background-color: #161616;
+}
+
+
+#hlogo{
+    scale: 1;
+    margin-top: 80px;
+    margin-left: 35px;
+}
+
+#usefulllinks{
+    color: white;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+    margin-left: 340px;
+    margin-top: -80px;
+    font-size: 25px;
+}
+
+
+#outcollections{
+    color: white;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+    margin-left: 650px;
+    margin-top: -32px;
+    font-size: 25px;
+    
+}
+
+#accounts{
+    color: white;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 500;
+    margin-left: 980px;
+    margin-top: -32px;
+    font-size: 25px;
+    
+}
+
+
+#usefull {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 340px;
+    margin-top: 25px;
+}
+
+#usefull > div {
+    margin-bottom: 8px; /* Adjust the value as needed */
+}
+
+
+#bikesfooter {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 650px;
+    margin-top: -120px;
+}
+
+#bikesfooter > div {
+    margin-bottom: 8px; /* Adjust the value as needed */
+}
+
+
+
+#Accountsfooter {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 978px;
+    margin-top: -122px;
+}
+
+#Accountsfooter > div {
+    margin-bottom: 8px; /* Adjust the value as needed */
+}
+
+
+
+#footerline{
+   /* background-color: black; */
+   margin-top: 100px;
+   /* width: 3px; */
+}
+
+#copyright{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+
+#socials{
+    display: flex;
+    color: white;
+    border-radius: 10%;
+    margin-left: 1100px;
+    margin-top: -25px;
+    
+}
+#socials > I {
+   
+    margin: 8px;
+
+}
+
+
+
+/* ==========================================Bicycles Navbar================================================ */
+
+#mainnavb{
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+
+#mainnavb ul {
+    list-style-type: none !important; /* Add !important to increase specificity */
+    text-decoration: none; /* This property only applies to anchor elements */
+    display: flex;
+    justify-content: center;
+    padding: px;
+}
+
+#mainnavb ul li {
+    padding: 14px;
+}
+
+#mainnavb ul li a {
+    color: white;
+    font-size: 14.8px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Apply text-decoration to anchor elements */
+}
+
+
+
+#logob{
+    position: absolute ;
+    z-index: 3;
+    max-width: 85px;
+    margin-left: 34px;
+    margin-top: 10px;
+}
+
+
+#brandnameb{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-weight: 360;
+    font-family: "Racing Sans One", sans-serif;
+    margin-top: 35px;
+    margin-left: 43px;
+}
+
+#navbarbicycles{
+    background-color: #df453e;
+    height: 70px;
+}
+
+
+#cartlogob{
+    position: absolute;
+    color: white;
+    z-index: 4;
+    margin-left: 1210px;
+    scale: 2;
+    margin-top: 22px;
+    
+}
+/* ==========================================Bicycles  Navbar================================================ */
+
+
+
+/* ==========================================Bicycles  Main  body================================================ */
+
+#mainbodybicycle{
+    background-color: lightblue;
+}
+
+
+
+
+/* ==========================================Bicycles  Main Body================================================ */
+
+
+/*  */

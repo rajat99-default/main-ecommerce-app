@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -68,11 +69,11 @@ const Home = () => {
             <i class="fa fa-star-o" aria-hidden="true"></i>
           </div>
           <p id="bikeprice1" >{key.price1}</p>
-          <div  id="sizes" >
+          <div id="sizes" >
 
-          <button id="L" >&nbsp;L&nbsp;</button>
-          <button>&nbsp;M&nbsp;</button>
-          <button id="xl" >XL</button>
+            <button id="L" >&nbsp;L&nbsp;</button>
+            <button>&nbsp;M&nbsp;</button>
+            <button id="xl" >XL</button>
           </div>
         </div>
       </div>
@@ -80,6 +81,35 @@ const Home = () => {
   });
   return (
     <>
+
+<img id="logo" src="/images/logo-1.png" />
+<h1 id="brandname" >BikeHeaven.com</h1>
+
+<nav id="mainnav">
+      <ul>
+        <li>
+          <Link id="home" to="/home">HOME</Link>
+        </li>
+        <li>
+          <Link id="bicycles" to="/bicycles">BICYCLES</Link>
+        </li>
+        <li>
+          <Link id="accessories" to="/accessories">ACCESSORIES</Link>
+        </li>
+        <li>
+          <Link id="about-us" to="/about-us">ABOUT US</Link>
+        </li>
+        <li>
+          <Link id="contact" to="/contact">CONTACT</Link>
+        </li>
+      </ul>
+    </nav>
+
+    <i id="cartlogo" class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+
+
+
       <div>
         <h1 id="subtitle" >Kryo X26 <br /> MTB</h1>
         <div id="allspecs"  >
@@ -313,14 +343,14 @@ const Home = () => {
 
       <center>
         <div>
-          <h1  id="exploreaccess" >
+          <h1 id="exploreaccess" >
             Explore Accessories
           </h1>
         </div>
         <div>
-        <div id="products">
-          {productAns2}
-        </div>
+          <div id="products">
+            {productAns2}
+          </div>
         </div>
       </center>
 
@@ -328,23 +358,101 @@ const Home = () => {
 
       <center>
 
-      <button id="viewall" >VIEW ALL</button>
-    
+        <button id="viewall" >VIEW ALL</button>
+
       </center>
 
       <center >
         <div  >
 
-        <h1 id="join" >Join #GoEcoBiking Programme</h1>
+          <h1 id="join" >Join #GoEcoBiking Programme</h1>
         </div>
       </center>
 
-  
-        <div>
-          <img id="joinimage"  src="/images/joinprogramme.jpg"   />
-        </div>
-   
 
+      <div>
+        <img id="joinimage" src="/images/joinprogramme.jpg" />
+      </div>
+
+      <div id="joinpara"  >
+        <h2 id="joinpara1"  >Duis aute irure dolor in
+          <br />reprehenderit velit.</h2>
+        <br />
+        <p id="joinpara2" >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Ut elit tellus, luctus nec ullamcorper mattis.
+        </p>
+      </div>
+
+
+      <button id="joinprogramme" >JOIN THE PROGRAMME</button>
+
+      <div id="parallax4">
+        <div id="parallax4text"   >
+          <center>
+
+            <h2 id="parallax4h2"   >The All New</h2>
+            <h1 id="parallax4h1"  >Kryo X26 MTB Is Here</h1>
+            <p id="parallax4p"   >Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti <br />  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+
+            <button id="shopnow" >SHOP NOW</button>
+
+          </center>
+        </div>
+      </div>
+
+      <footer>
+        <div id="footer"  >
+
+          <img id="hlogo" src="/images/logo-1.png" />
+
+          <h2 id="usefulllinks"  >
+            Usefull Links
+          </h2>
+          <h2 id="outcollections"  >
+            Our Collection
+          </h2>
+          <h2 id="accounts"  >
+            Account
+          </h2>
+
+          <div id="usefull" >
+
+            <div>Home</div>
+            <div>Shop</div>
+            <div>About Us</div>
+            <div>Contact Us</div>
+          </div>
+
+          <div id="bikesfooter"   >
+
+            <div>Mountain Bikes</div>
+            <div>City Bikes</div>
+            <div>Speciality Bikes</div>
+            <div>Electric Bikes</div>
+          </div>
+
+          <div id="Accountsfooter"  >
+
+            <div>Customer Login</div>
+            <div>Dealer Login</div>
+            <div>Addresses</div>
+            <div>Payment Methods</div>
+          </div>
+
+        <hr id="footerline"  />
+
+        <div  id="copyright"  >Copyright © 2024 Cycle Shop</div>
+<div id="socials" >
+
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+</div>
+
+
+        </div>
+      </footer>
 
     </>
   );
