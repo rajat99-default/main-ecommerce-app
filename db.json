@@ -45,7 +45,7 @@
       "image1": "g2.jpg"
     },
     {
-      "id": "4",
+      "id": "3",
       "type1": "Accessories",
       "name1": "Bicycle Gloves Pink",
       "price1": "$25.00 – $32.00",
@@ -55,9 +55,8 @@
       "id": "4",
       "type1": "Accessories",
       "name1": "Bicycle Gloves Red",
-      "price1": " $92.00 – $98.00",
+      "price1": "$92.00 – $98.00",
       "image1": "g4.jpg"
     }
-
   ]
 }

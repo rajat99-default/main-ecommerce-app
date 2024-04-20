@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 import axios from "axios";
-
-import { useState, useEffect } from "react";
 
 const Accessories = () => {
     const [mydata2, setMydata2] = useState([]);
     const [sliderValue, setSliderValue] = useState(50);
-
+    const [sortOption, setSortOption] = useState("default");
 
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value);
@@ -17,43 +14,53 @@ const Accessories = () => {
     const loadData2 = () => {
         let url = "http://localhost:4000/accessories";
         axios.get(url).then((res) => {
-          setMydata2(res.data);
+            setMydata2(res.data);
         })
-      }
+    }
 
     useEffect(() => {
         loadData2();
-
     }, []);
 
+    const handleSortChange = (event) => {
+        const option = event.target.value;
+        setSortOption(option);
+        let sortedData = [...mydata2];
+        if (option === "lowToHigh") {
+            sortedData.sort((a, b) => a.price1 - b.price1);
+        } else if (option === "highToLow") {
+            sortedData.sort((a, b) => b.price1 - a.price1);
+        }
+        setMydata2([...sortedData]); // Update state with the sorted array
+    };
 
     const productAns2a = mydata2.map((key) => {
         return (
-          <div id="proitems1a"> {/* Add container div */}
-            <img src={"images/" + key.image1} />
-            <br />
-            <div id="product-details1a"> {/* Container for name and price */}
-              <p id="biketype1a" >{key.type1}</p>
-              <br />
-              <p id="bikename1a" >{key.name1}</p>
-              <br />
-              <div id="bikestars1a" ><i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-              </div>
-              <p id="bikeprice1a" >{key.price1}</p>
-              <div id="sizesa" >
-    
-                <button id="La" >&nbsp;L&nbsp;</button>
-                <button>&nbsp;M&nbsp;</button>
-                <button id="xla" >XL</button>
-              </div>
+            <div id="proitems1a" key={key.id}>
+                <img id='accessorieimage' src={"images/" + key.image1} alt={key.name1} />
+                <br />
+                <div id="product-details1a">
+                    <p id="biketype1a">{key.type1}</p>
+                    <br />
+                    <p id="bikename1a">{key.name1}</p>
+                    <br />
+                    <div id="bikestars1a">
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <p id="bikeprice1a">{key.price1}</p>
+                    <div id="sizesa">
+                        <button id="La">&nbsp;L&nbsp;</button>
+                        <button>&nbsp;M&nbsp;</button>
+                        <button id="xla">XL</button>
+                    </div>
+                </div>
             </div>
-          </div>
         );
-      });
+    });
 
     return (
         <>
@@ -127,27 +134,27 @@ const Accessories = () => {
 
                 <div id='filterbycat' >
                     <h2 id='filterbycatpara1'  >filter by categories</h2>
-                    <div id='filterbycatpara2' >Accessories (4)</div>
-                    <div id='filterbycatpara3'  >Bicycles (4)</div>
+                    <Link id='filterbycatpara2' to="/accessories">Accessories (4)</Link>
+                    <Link id='filterbycatpara3' to="/bicycles">Bicycles (4)</Link>
+
                 </div>
 
                 <div id='showbikes'>
                     <Link id='bicycletohome' to="/home">Home</Link>
                     <div id='bicycletobicycle'  >/ Accessories</div>
                     <h1 id='bicyclesheading'>
-                    Accessories
+                        Accessories
                     </h1>
 
                     <div id='showingresults'  >
                         Showing all 4 results
                     </div>
 
-                    <select id='sortfilter'  >
-                        <option>Default Sorting</option>
-                        <option>Sort by price : low to high</option>
-                        <option>Sort by price : high to low</option>
+                    <select id='sortfilter' value={sortOption} onChange={handleSortChange}>
+                        <option value="default">Default Sorting</option>
+                        <option value="lowToHigh">Sort by price: low to high</option>
+                        <option value="highToLow">Sort by price: high to low</option>
                     </select>
-
                     <div id="productsb">
                         {productAns2a}
                     </div>

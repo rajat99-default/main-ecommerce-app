@@ -1085,6 +1085,7 @@
     margin-top: 60px;
     position: absolute;
     font-weight: 600;
+    
 }
 
 #filterbycatpara3{
@@ -1272,4 +1273,21 @@
     background-color: #161616;
 }
 
+
+#sizesa button{
+    flex: 0.1; /* Make buttons grow equally within the flex container */
+    border: 0.1px solid rgb(224, 200, 200);
+    padding: 3px; /* Adjust padding as needed */
+    margin: 0 3px; /* Adjust margin as needed */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(116, 110, 110);
+    background-color: white;
+    transition: border-color 0.5s ease;
+}
+
+
+#accessorieimage:hover{
+    
+    
+}
 /* ==========================================Accessories  Main Body================================================ */

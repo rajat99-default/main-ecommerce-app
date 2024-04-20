@@ -122,8 +122,8 @@ const Bicycles = () => {
 
                 <div id='filterbycat' >
                     <h2 id='filterbycatpara1'  >filter by categories</h2>
-                    <div id='filterbycatpara2' >Accessories (4)</div>
-                    <div id='filterbycatpara3'  >Bicycles (4)</div>
+                    <Link id='filterbycatpara2' to="/accessories">Accessories (4)</Link>
+                    <Link id='filterbycatpara3' to="/bicycles">Bicycles (4)</Link>
                 </div>
 
                 <div id='showbikes'>
