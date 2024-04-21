@@ -173,6 +173,7 @@
 }
 
 
+
 #biketype{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
@@ -431,6 +432,10 @@
     
 }
 
+#cartlogoonbikes{
+    
+}
+
 #lightweight{
     position: absolute;
     margin-left: 100px;
@@ -561,6 +566,18 @@
 #bikestars1{
     margin-top: -14px;
     margin-left: -200px;
+}
+
+#addtocartb{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 10px 15px 10px 15px;
+    font-weight: 700;
+    margin-top: -35px;
+    margin-left: 90px;
+    z-index: 4;
 }
 
 
@@ -1230,6 +1247,7 @@
 {
     padding: 10px;
     
+    
     /* border: 2px solid grey; */
     
     
@@ -1265,6 +1283,19 @@
     margin-left: -0px;
 }
 
+#addtocarta{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+    font-weight: 700;
+    margin-top: -px;
+    margin-left: 120px;
+    z-index: 4;
+    font-size: 10px;
+}
+
 
 #footerba{
     margin-top: 415px;
@@ -1291,3 +1322,83 @@
     
 }
 /* ==========================================Accessories  Main Body================================================ */
+/* ==========================================CART  Main Body================================================ */
+
+
+#mainbodycart{
+    height: 2000px;
+    background-color: #eceff1;
+    /* position: absolute; */
+}
+
+
+#tablecart{
+    margin-top: 60px;
+    margin-left: 30px;
+    position: absolute;
+    height: 1800px;
+    width: 1200px;
+    background-color: white;
+}
+
+#tablecartheading{
+    font-size: 25px;
+    font-family: "Racing Sans One", sans-serif;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+
+#cartTable{
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+
+   
+}
+
+
+
+
+#cartimage{
+    max-width: 150px;
+    margin-left: 0px;
+    margin-top: px;
+    
+}
+
+#maincartitems td{
+    padding: 50px;
+}
+#maincartitems {
+    /* padding: 50px; */
+    border-bottom: 1px solid black;
+}
+
+#cartproduct{
+    padding-right: 70px;
+    padding-left: 30px;
+}
+
+
+#buynow{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 20px 25px 20px 25px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -100px;
+    margin-left: 580px;
+    z-index: 4;
+}
+/* ==========================================CART  Main Body================================================ */
+
+
+
+  
+
+
+

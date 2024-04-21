@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 import { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { addBicycleToCart } from "./CartSlice";
 
 const Bicycles = () => {
     const [mydata, setMydata] = useState([]);
     const [sliderValue, setSliderValue] = useState(50);
 
+
+    const dispatch= useDispatch();
 
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value);
@@ -37,13 +41,14 @@ const Bicycles = () => {
                     <br />
                     <p id="bikenameb" >{key.name}</p>
                     <br />
-                    <div id="bikestarsb" ><i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <div id="bikestarsb" ><i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
+                        <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
                     <p id="bikepriceb" >{key.price}</p>
+                    <button onClick={()=>{dispatch(addBicycleToCart({id:key.id, name:key.name, price:key.price, image:key.image, type:key.type }))}}   id="addtocartb" >ADD TO CART</button>
                 </div>
             </div>
         );
@@ -81,7 +86,9 @@ const Bicycles = () => {
                         </ul>
                     </nav>
 
-                    <i id="cartlogob" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <Link to="/cartitem" id="cartlogo">
+      <i className="fa fa-shopping-cart" aria-hidden="true" />
+    </Link>
 
                 </div>
 
@@ -95,7 +102,7 @@ const Bicycles = () => {
                         Search
                     </div>
                     <input id="searchbicyclesbox" type="text" placeholder="Search products..." />
-                    <button id="searchall" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button id="searchall" ><i className="fa fa-search" aria-hidden="true"></i></button>
 
 
                 </div>
@@ -194,10 +201,10 @@ const Bicycles = () => {
                         <div id="copyright"  >Copyright © 2024 Cycle Shop</div>
                         <div id="socials" >
 
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <i className="fa fa-facebook-official" aria-hidden="true"></i>
+                            <i className="fa fa-twitter" aria-hidden="true"></i>
+                            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <i className="fa fa-youtube-play" aria-hidden="true"></i>
                         </div>
 
 

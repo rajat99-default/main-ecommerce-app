@@ -2,6 +2,9 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+import { addBicycleToCart,addAccessoryToCart } from "./CartSlice";
 
 
 
@@ -9,8 +12,9 @@ const Home = () => {
 
   const [mydata, setMydata] = useState([]);
   const [mydata2, setMydata2] = useState([]);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-  // const dispatch= useDispatch();
+  const dispatch= useDispatch();
 
 
   const loadData = () => {
@@ -31,49 +35,85 @@ const Home = () => {
     loadData2();
   }, []);
 
-  const productAns = mydata.map((key) => {
+
+const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
+  
+
+
+
+  const productAns = mydata.map((key,index) => {
     return (
-      <div id="proitems"> {/* Add container div */}
-        <img src={"images/" + key.image} />
+      <div id="proitems" key={index}  >
+        
+        <div className="image-container" onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+            style={{ position: 'relative' }}
+          >
+            <img src={"images/" + key.image} alt={`Product ${index}`} />
+            {hoveredItem === index && (
+
+              <Link   >
+              
+              <i onClick={()=>{dispatch(addBicycleToCart({id:key.id, name:key.name, price:key.price, image:key.image, type:key.type }))}}   className="fa fa-shopping-cart" aria-hidden="true"  style={{ position: 'absolute', marginLeft:'-40px',marginTop:'20px' , color:'white',scale:'2' }} ></i>
+              </Link>
+            )}
+          </div>
         <br />
         <div id="product-details"> {/* Container for name and price */}
           <p id="biketype" >{key.type}</p>
           <br />
           <p id="bikename" >{key.name}</p>
           <br />
-          <div id="bikestars" ><i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+          <div id="bikestars" ><i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
           </div>
           <p id="bikeprice" >{key.price}</p>
         </div>
       </div>
     );
   });
-  const productAns2 = mydata2.map((key) => {
+  const productAns2 = mydata2.map((key, index) => {
     return (
-      <div id="proitems1"> {/* Add container div */}
-        <img src={"images/" + key.image1} />
+      <div id="proitems1" key={index}> {/* Add key prop */}
+        <div className="image-container" onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+          style={{ position: 'relative' }}
+        >
+          <img src={"images/" + key.image1} alt={`Product ${index}`} />
+          {hoveredItem === index && (
+          
+              <i onClick={() => { dispatch(addAccessoryToCart({ id: key.id, name: key.name1, price: key.price1, image: key.image1, brand: key.brand1 })) }} className="fa fa-shopping-cart" aria-hidden="true" style={{ position: 'absolute', marginLeft: '-40px', marginTop: '20px', color: 'black', scale: '2' }}></i>
+            
+          )}
+        </div>
         <br />
         <div id="product-details1"> {/* Container for name and price */}
-          <p id="biketype1" >{key.type1}</p>
+          <p id="biketype1">{key.type1}</p>
           <br />
-          <p id="bikename1" >{key.name1}</p>
+          <p id="bikename1">{key.name1}</p>
           <br />
-          <div id="bikestars1" ><i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+          <div id="bikestars1">
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
           </div>
-          <p id="bikeprice1" >{key.price1}</p>
-          <div id="sizes" >
-
-            <button id="L" >&nbsp;L&nbsp;</button>
+          <p id="bikeprice1">{key.price1}</p>
+          <div id="sizes">
+            <button id="L">&nbsp;L&nbsp;</button>
             <button>&nbsp;M&nbsp;</button>
-            <button id="xl" >XL</button>
+            <button id="xl">XL</button>
           </div>
         </div>
       </div>
@@ -104,8 +144,9 @@ const Home = () => {
         </li>
       </ul>
     </nav>
-
-    <i id="cartlogo" class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <Link to="/cartitem" id="cartlogo">
+      <i className="fa fa-shopping-cart" aria-hidden="true" />
+    </Link>
 
 
 
@@ -120,15 +161,15 @@ const Home = () => {
           <div id="specs">
 
             <div>
-              <i id="bullseye" class="fa fa-bullseye" aria-hidden="true"></i>
+              <i id="bullseye" className="fa fa-bullseye" aria-hidden="true"></i>
               Lightweight 18" Frame
             </div>
             <div>
-              <i id="bullseye" class="fa fa-bullseye" aria-hidden="true"></i>
+              <i id="bullseye" className="fa fa-bullseye" aria-hidden="true"></i>
               Steel Suspension Fork
             </div>
             <div>
-              <i id="bullseye" class="fa fa-bullseye" aria-hidden="true"></i>
+              <i id="bullseye" className="fa fa-bullseye" aria-hidden="true"></i>
               Steel Hardtail Frame
             </div>
           </div>
@@ -165,16 +206,16 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
 
@@ -182,15 +223,15 @@ const Home = () => {
 
         <div id="rightmountain">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
         </div>
@@ -211,16 +252,16 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
 
@@ -228,15 +269,15 @@ const Home = () => {
 
         <div id="rightmountain">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
         </div>
@@ -256,16 +297,16 @@ const Home = () => {
 
         <div id="mountainbikespecs">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Officia deserunt mollit
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Excepteur sint occaecat
 
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
 
@@ -273,15 +314,15 @@ const Home = () => {
 
         <div id="rightmountain">
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Sunt in culpa qui
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Suspension Fork
           </div>
           <div>
-            <i id="bullseye" style={{ color: '#df453e' }} class="fa fa-bullseye" aria-hidden="true"></i>
+            <i id="bullseye" style={{ color: '#df453e' }} className="fa fa-bullseye" aria-hidden="true"></i>
             Steel Hardtail Frame
           </div>
         </div>
@@ -392,7 +433,7 @@ const Home = () => {
 
             <h2 id="parallax4h2"   >The All New</h2>
             <h1 id="parallax4h1"  >Kryo X26 MTB Is Here</h1>
-            <p id="parallax4p"   >Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti <br />  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+            <p id="parallax4p"   >Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. className aptent taciti <br />  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 
             <button id="shopnow" >SHOP NOW</button>
 
@@ -444,10 +485,10 @@ const Home = () => {
         <div  id="copyright"  >Copyright © 2024 Cycle Shop</div>
 <div id="socials" >
 
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        <i className="fa fa-facebook-official" aria-hidden="true"></i>
+        <i className="fa fa-twitter" aria-hidden="true"></i>
+        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+        <i className="fa fa-youtube-play" aria-hidden="true"></i>
 </div>
 
 

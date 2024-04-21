@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { useDispatch } from 'react-redux';
+import { addAccessoryToCart } from "./CartSlice";
 
 const Accessories = () => {
     const [mydata2, setMydata2] = useState([]);
     const [sliderValue, setSliderValue] = useState(50);
     const [sortOption, setSortOption] = useState("default");
+
+    const dispatch= useDispatch();
 
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value);
@@ -52,6 +56,7 @@ const Accessories = () => {
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
                     <p id="bikeprice1a">{key.price1}</p>
+                    <button onClick={()=>{dispatch(addAccessoryToCart({id:key.id, name:key.name, price:key.price, image:key.image, type:key.type }))}}  id="addtocarta" >ADD TO CART</button>
                     <div id="sizesa">
                         <button id="La">&nbsp;L&nbsp;</button>
                         <button>&nbsp;M&nbsp;</button>
@@ -93,7 +98,9 @@ const Accessories = () => {
                         </ul>
                     </nav>
 
-                    <i id="cartlogob" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <Link to="/cartitem" id="cartlogo">
+      <i className="fa fa-shopping-cart" aria-hidden="true" />
+    </Link>
 
                 </div>
 
@@ -107,7 +114,7 @@ const Accessories = () => {
                         Search
                     </div>
                     <input id="searchbicyclesbox" type="text" placeholder="Search products..." />
-                    <button id="searchall" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button id="searchall" ><i className="fa fa-search" aria-hidden="true"></i></button>
 
 
                 </div>
@@ -206,10 +213,10 @@ const Accessories = () => {
                         <div id="copyright"  >Copyright © 2024 Cycle Shop</div>
                         <div id="socials" >
 
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <i className="fa fa-facebook-official" aria-hidden="true"></i>
+                            <i className="fa fa-twitter" aria-hidden="true"></i>
+                            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <i className="fa fa-youtube-play" aria-hidden="true"></i>
                         </div>
 
 
