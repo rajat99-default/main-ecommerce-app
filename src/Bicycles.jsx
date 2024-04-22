@@ -9,13 +9,22 @@ import { addBicycleToCart } from "./CartSlice";
 
 const Bicycles = () => {
     const [mydata, setMydata] = useState([]);
-    const [sliderValue, setSliderValue] = useState(50);
+    const [sliderValue, setSliderValue] = useState(20);
 
 
-    const dispatch= useDispatch();
+    const dispatch = useDispatch();
 
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value);
+        updateSliderValueDisplay(event.target.value);
+    };
+
+    const updateSliderValueDisplay = (value) => {
+        const slider = document.getElementById('myRange');
+        const display = document.getElementById('sliderValueDisplay');
+        const thumbWidth = slider.offsetWidth * (value - slider.min) / (slider.max - slider.min) - (display.offsetWidth / 2);
+        display.style.left = `${thumbWidth}px`;
+        display.textContent = `Value: ${value}`;
     };
 
     const loadData = () => {
@@ -48,7 +57,7 @@ const Bicycles = () => {
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
                     <p id="bikepriceb" >{key.price}</p>
-                    <button onClick={()=>{dispatch(addBicycleToCart({id:key.id, name:key.name, price:key.price, image:key.image, type:key.type }))}}   id="addtocartb" >ADD TO CART</button>
+                    <button onClick={() => { dispatch(addBicycleToCart({ id: key.id, name: key.name, price: key.price, image: key.image, type: key.type })) }} id="addtocartb" >ADD TO CART</button>
                 </div>
             </div>
         );
@@ -87,8 +96,8 @@ const Bicycles = () => {
                     </nav>
 
                     <Link to="/cartitem" id="cartlogo">
-      <i className="fa fa-shopping-cart" aria-hidden="true" />
-    </Link>
+                        <i className="fa fa-shopping-cart" aria-hidden="true" />
+                    </Link>
 
                 </div>
 
@@ -110,21 +119,26 @@ const Bicycles = () => {
                     <h1 id='filterbheading' >Filter by price</h1>
 
 
-                    <div className="slidecontainer">
-
+                    <div id="slidecontainer">
                         <input
                             type="range"
-                            min="1"
-                            max="100"
+                            min="20"
+                            max="350"
                             value={sliderValue}
                             className="slider"
                             id="myRange"
                             onChange={handleSliderChange}
                         />
                     </div>
+                    <p id="sliderValueDisplay">{sliderValue}</p>
 
+                    <div id='sliderstart'  >
+                        $20
+                    </div>
+                    <div id='sliderend' >
+                        $350
+                    </div>
 
-                    <p>Value: {sliderValue}</p>
                 </div>
 
                 <div id='filterbycat' >

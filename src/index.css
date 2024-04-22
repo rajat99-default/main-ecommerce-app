@@ -490,7 +490,7 @@
 #kryo4{
     scale: 0.35;
     margin-left: -525px;
-    margin-top: -544.5px;
+    margin-top: -546px;
     position: absolute;
     filter: brightness(40%);
 }
@@ -1382,7 +1382,7 @@
 }
 
 
-#buynow{
+#buynow1{
     border: none;
     color: white;
     background-color: #df453e;
@@ -1397,8 +1397,86 @@
 /* ==========================================CART  Main Body================================================ */
 
 
+#slidecontainer {
+    width: 85%;
 
+    margin-top: 20px; /* Adjust as needed */
+    margin-left: 25px;
+}
+
+.slider {
+    -webkit-appearance: none; /* Remove default styles for WebKit browsers */
+    width: 100%; /* Set the width of the slider */
+    height: 4px; /* Set the height of the slider */
+    background: #ec150a ; /* Background color of the slider track */
+    border-radius: 5px; /* Set the border radius */
+    outline: none; /* Remove the outline */
+    opacity: 0.7; /* Set the opacity */
+    -webkit-transition: .2s; /* 0.2 second transition for smoother hover effect */
+    transition: opacity .2s; /* 0.2 second transition for smoother hover effect */
+}
+
+.slider:hover {
+    opacity: 1; /* Change opacity on hover */
+}
+
+/* Customize the appearance of the slider thumb */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styles for WebKit browsers */
+    appearance: none; /* Remove default styles */
+    width: 18px; /* Set the width of the thumb */
+    height: 18px; /* Set the height of the thumb */
+    background: #ec150a; /* Thumb color */
+    border-radius: 50%; /* Set the border radius to make it round */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Customize the appearance of the slider thumb for Mozilla Firefox */
+.slider::-moz-range-thumb {
+    width: 20px; /* Set the width of the thumb */
+    height: 20px; /* Set the height of the thumb */
+    background: #ec150a; /* Thumb color */
+    border-radius: 50%; /* Set the border radius to make it round */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+#sliderValueDisplay {
+    position: absolute;
+    /* bottom: -30px; Adjust as needed */
+    /* left: 0; */
+    margin-top: -35px;
+    margin-left: 25px;
+    font-family: "Racing Sans One", sans-serif;
+    /* font-weight: 300; */
+    
+    
+}
+#sliderValueDisplay2 {
+    position: absolute;
+    /* bottom: -30px; Adjust as needed */
+    /* left: 0; */
+    margin-top: -35px;
+    margin-left: 25px;
+    font-family: "Racing Sans One", sans-serif;
+    /* font-weight: 300; */
+    
+    
+}
   
+#sliderstart{
+    font-family: "Racing Sans One", sans-serif;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+#sliderend{
+    font-family: "Racing Sans One", sans-serif;
+    margin-top: -19px;
+    margin-left: 285px;
+    font-size: 15px;
+}
+
 
 
 

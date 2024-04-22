@@ -6,13 +6,22 @@ import { addAccessoryToCart } from "./CartSlice";
 
 const Accessories = () => {
     const [mydata2, setMydata2] = useState([]);
-    const [sliderValue, setSliderValue] = useState(50);
+    const [sliderValue, setSliderValue] = useState(20);
     const [sortOption, setSortOption] = useState("default");
 
     const dispatch= useDispatch();
 
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value);
+        updateSliderValueDisplay(event.target.value);
+    };
+
+    const updateSliderValueDisplay = (value) => {
+        const slider = document.getElementById('myRange');
+        const display = document.getElementById('sliderValueDisplay');
+        const thumbWidth = slider.offsetWidth * (value - slider.min) / (slider.max - slider.min) - (display.offsetWidth / 2);
+        display.style.left = `${thumbWidth}px`;
+        display.textContent = `Value: ${value}`;
     };
 
     const loadData2 = () => {
@@ -122,21 +131,25 @@ const Accessories = () => {
                     <h1 id='filterbheading' >Filter by price</h1>
 
 
-                    <div className="slidecontainer">
-
+                    <div id="slidecontainer">
                         <input
                             type="range"
-                            min="1"
-                            max="100"
+                            min="20"
+                            max="350"
                             value={sliderValue}
                             className="slider"
                             id="myRange"
                             onChange={handleSliderChange}
                         />
                     </div>
+                    <p id="sliderValueDisplay">{sliderValue}</p>
 
-
-                    <p>Value: {sliderValue}</p>
+                    <div id='sliderstart'  >
+                        $20
+                    </div>
+                    <div id='sliderend' >
+                        $350
+                    </div>
                 </div>
 
                 <div id='filterbycat' >

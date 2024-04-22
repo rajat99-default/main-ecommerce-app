@@ -96,8 +96,10 @@ const CartItem = () => {
 
       </div>
 
+      <Link to="/buynow"  >
       
-        <button  id="buynow"  > Buy Now </button>
+        <button   id="buynow1"  > Buy Now </button>
+      </Link>
       
     </>
   )

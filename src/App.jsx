@@ -4,6 +4,7 @@ import Layout from "./Layout"
 import Bicycles from "./Bicycles"
 import Accessories from "./Accessories"
 import CartItem from "./CartItem"
+import Buynow from "./Buynow"
 // import Slider from "./Slider"
 
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="bicycles" element={<Bicycles/>} />
           <Route path="accessories" element={<Accessories/>} />
           <Route path="cartitem" element={<CartItem/>} />
+          <Route path="buynow" element={<Buynow/>} />
           
         </Route>
       </Routes>
