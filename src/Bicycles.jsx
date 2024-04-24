@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { useState } from 'react';
 import axios from "axios";
+// import Search from './Search';
 
 import { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
@@ -42,10 +43,10 @@ const Bicycles = () => {
 
     const productAnsb = mydata.map((key) => {
         return (
-            <div id="proitemsb"> {/* Add container div */}
+            <div id="proitemsb"> 
                 <img src={"images/" + key.image} />
                 <br />
-                <div id="product-detailsb"> {/* Container for name and price */}
+                <div id="product-detailsb"> 
                     <p id="biketypeb" >{key.type}</p>
                     <br />
                     <p id="bikenameb" >{key.name}</p>
@@ -110,7 +111,7 @@ const Bicycles = () => {
                     <div id='searchbicyclesname' >
                         Search
                     </div>
-                    <input id="searchbicyclesbox" type="text" placeholder="Search products..." />
+                    <input   id="searchbicyclesbox" type="text" placeholder="Search products..." />
                     <button id="searchall" ><i className="fa fa-search" aria-hidden="true"></i></button>
 
 
@@ -143,7 +144,7 @@ const Bicycles = () => {
 
                 <div id='filterbycat' >
                     <h2 id='filterbycatpara1'  >filter by categories</h2>
-                    <Link id='filterbycatpara2' to="/accessories">Accessories (4)</Link>
+                    <Link id='filterbycatpara2' to="/accessories">Accessories (6)</Link>
                     <Link id='filterbycatpara3' to="/bicycles">Bicycles (4)</Link>
                 </div>
 

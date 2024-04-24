@@ -1,18 +1,170 @@
 @media screen and (width: 1920px) and (height: 1080px) {
     #bgImage {
-        max-width: 875px;
+        /* scale: 0.8; */
+        max-width: 880px;
+        max-height: 650px;
     }
     
     #reddiv{
-        max-width: 500px;
-        margin-left: 400px;
+        max-width: 420px;
+        margin-left: 460px;
 
     }
     #blackdiv{
-        max-width: 400px;
+        max-width: 460px;
+        max-height: 795px;
+    }
+    #reddiv{
+        /* display: none; */
     }
 
+    #mainnav{
+        margin-left: 200px;
+    }
+    #brandname{
+        margin-top: 50px;
+    }
 
+    #buynow{
+        margin-left: 300px;
+        margin-top: -50px;
+    }
+    #cartlogo{
+        margin-left: 830px;
+    }
+    
 
+    #newarrivals{
+        margin-left: -1000px;
+        margin-top: 40px;
+    }
+
+    #products{
+        margin-left: -1050px;
+        margin-top: 0px;
+        scale: 0.7;
+    }
+
+    #parallax{
+        background-image: url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/04/moutain-bike.jpg);
+        max-width: 880px;
+    }
+    
+    #parallax2 {
+        max-width: 880px;
+        background-image: url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/04/city-bike.jpg);
+    }
+    #parallax3 {
+        max-width: 880px;
+        background-image: url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/04/speciality-bike.jpg);
+    }
+    #whychoose{
+        margin-left: -1050px;
+    }
+    #kryo1div{
+        scale: 0.7;
+        margin-left: -1045px;
+        margin-top: 0px;
+    }
+    #kryoidmediaquery{
+        scale: 0.68;
+        margin-left: -1050px;
+        margin-top: -100px;
+    }
+    #kryo3para{
+        margin-left: 940px;
+    }
+    #kryo4para{
+        margin-left: 1340px;
+    }
+    #kryo5para{
+        margin-left: 1740px;
+    }
+    #exploreaccess{
+        margin-left: -1050px;
+        margin-top: -110px;
+    }
+    #productshelmet{
+        scale: 0.7;
+        margin-left: -650px;
+    }
+    #viewall{
+        margin-left: -550px;
+        margin-top: 10px;
+    }
+    #join{
+        margin-top: 110px;
+        margin-left: -1050px;
+        font-size: 50px;
+    }
+    #joinimage{
+        scale: 0.4;
+        margin-left: -525px;
+        margin-top: -280px;
+    }
+
+    #joinpara1{
+        margin-left: -50px;
+        margin-top: -230px;
+    }
+    #joinpara2{
+        margin-left: -50px;
+    }
+
+    #joinprogramme{
+        margin-left: 600px;
+    }
+    #parallax4 {
+        background-image: url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/bicycle-1.jpg);
+        max-width: 880px;
+        
+    }
+
+    #parallax4h2{
+        margin-left: -80px;
+    }
+    #parallax4h1{
+        margin-left: -80px;
+    }
+    #parallax4p{
+        margin-left: -140px;
+    }
+    #shopnow{
+        margin-left: -110px;
+        margin-top: 70px;
+    }
+   #usefulllinks{
+    margin-left: 250px;
+   }
+   #usefull{
+    margin-left: 250px;
+   }
+   #outcollections{
+    margin-left: 550px;
+   }
+   #bikesfooter{
+    margin-left: 550px;
+   }
+   #accounts{
+    margin-left: 900px;
+   }
+   #Accountsfooter{
+    margin-left: 900px;
+   }
+   #socials{
+    margin-left: 900px;
+   }
+    #footer{
+        scale: 0.8;
+        margin-left: -140px;
+        /* padding-bottom: 100px; */
+        margin-top: -50px;
+    }
+    #footerb{
+        scale: 0.8;
+        margin-left: -140px;
+        /* padding-bottom: 100px; */
+        margin-top: -50px;
+    }
   }
   

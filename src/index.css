@@ -159,6 +159,14 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+#productshelmet
+{
+    margin-top: 27px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 #proitems
 {

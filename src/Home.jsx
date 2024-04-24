@@ -180,9 +180,13 @@ const handleMouseEnter = (index) => {
         <br />
         <div id="reddiv" />
       </div>
+
+      <Link to='/buynow' >
+      
       <button id="buynow" >
         Buy Now
       </button>
+      </Link>
 
       <center>
 
@@ -236,7 +240,10 @@ const handleMouseEnter = (index) => {
           </div>
         </div>
 
-        <button id="explorenow" >EXPLORE NOW</button>
+       
+
+        <button onClick={() => window.scrollTo(0, 0)}  id="explorenow" >EXPLORE NOW</button>
+      
 
       </div>
 
@@ -282,7 +289,7 @@ const handleMouseEnter = (index) => {
           </div>
         </div>
 
-        <button id="explorenow" >EXPLORE NOW</button>
+        <button onClick={() => window.scrollTo(0, 0)}  id="explorenow" >EXPLORE NOW</button>
       </div>
 
 
@@ -327,7 +334,7 @@ const handleMouseEnter = (index) => {
           </div>
         </div>
 
-        <button id="explorenow" >EXPLORE NOW</button>
+        <button onClick={() => window.scrollTo(0, 0)}  id="explorenow" >EXPLORE NOW</button>
       </div>
       <center>
 
@@ -362,7 +369,7 @@ const handleMouseEnter = (index) => {
 
       <center>
 
-        <div>
+        <div id="kryoidmediaquery"  >
           <div>
             <h2 id="kryo3para" >Biggest Service Network</h2>
             <img id="kryo3" src="/images/specification3.jpg" />
@@ -389,7 +396,7 @@ const handleMouseEnter = (index) => {
           </h1>
         </div>
         <div>
-          <div id="products">
+          <div id="productshelmet">
             {productAns2}
           </div>
         </div>
@@ -399,7 +406,7 @@ const handleMouseEnter = (index) => {
 
       <center>
 
-        <button id="viewall" >VIEW ALL</button>
+        <button  onClick={() => window.scrollTo(0, 0)}  id="viewall" >VIEW ALL</button>
 
       </center>
 
@@ -425,7 +432,7 @@ const handleMouseEnter = (index) => {
       </div>
 
 
-      <button id="joinprogramme" >JOIN THE PROGRAMME</button>
+      <button onClick={() => window.scrollTo(0, 0)}    id="joinprogramme" >JOIN THE PROGRAMME</button>
 
       <div id="parallax4">
         <div id="parallax4text"   >
@@ -434,8 +441,9 @@ const handleMouseEnter = (index) => {
             <h2 id="parallax4h2"   >The All New</h2>
             <h1 id="parallax4h1"  >Kryo X26 MTB Is Here</h1>
             <p id="parallax4p"   >Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. className aptent taciti <br />  sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
-
+<Link to='/bicycles'  >
             <button id="shopnow" >SHOP NOW</button>
+</Link>
 
           </center>
         </div>
