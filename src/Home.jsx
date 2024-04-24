@@ -77,7 +77,7 @@ const handleMouseEnter = (index) => {
             <i className="fa fa-star-o" aria-hidden="true"></i>
             <i className="fa fa-star-o" aria-hidden="true"></i>
           </div>
-          <p id="bikeprice" >{key.price}</p>
+          <p id="bikeprice" >${key.price}</p>
         </div>
       </div>
     );
@@ -92,7 +92,7 @@ const handleMouseEnter = (index) => {
           <img src={"images/" + key.image1} alt={`Product ${index}`} />
           {hoveredItem === index && (
           
-              <i onClick={() => { dispatch(addAccessoryToCart({ id: key.id, name: key.name1, price: key.price1, image: key.image1, brand: key.brand1 })) }} className="fa fa-shopping-cart" aria-hidden="true" style={{ position: 'absolute', marginLeft: '-40px', marginTop: '20px', color: 'black', scale: '2' }}></i>
+              <i onClick={() => { dispatch(addAccessoryToCart({ id1: key.id1, name1: key.name1, price1: key.price1, image1: key.image1, type1: key.type1 })) }} className="fa fa-shopping-cart" aria-hidden="true" style={{ position: 'absolute', marginLeft: '-40px', marginTop: '20px', color: 'black', scale: '2' }}></i>
             
           )}
         </div>
@@ -109,7 +109,7 @@ const handleMouseEnter = (index) => {
             <i className="fa fa-star-o" aria-hidden="true"></i>
             <i className="fa fa-star-o" aria-hidden="true"></i>
           </div>
-          <p id="bikeprice1">{key.price1}</p>
+          <p id="bikeprice1">${key.price1}</p>
           <div id="sizes">
             <button id="L">&nbsp;L&nbsp;</button>
             <button>&nbsp;M&nbsp;</button>

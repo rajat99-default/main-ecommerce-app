@@ -10,25 +10,25 @@ const CartSlice= createSlice({
         addBicycleToCart: (state, action) => {
             const { id, name, price, image, type } = action.payload;
             
-            // Check if the product is already in the cart
+         
             const existingProduct = state.cart.find((item) => item.id === id);
             if (existingProduct) {
                 alert("Product already added!");
             } else {
-                // Add the product to the cart
+               
                 state.cart.push({ id, name, price, image, type, qnty: 1 });
             }
         },
     
         addAccessoryToCart: (state, action) => {
-            const { id, name1, price1, image1, type1 } = action.payload;
+            const { id1, name1, price1, image1, type1 } = action.payload;
     
-            const existingProduct = state.cart.find((item) => item.id === id);
+            const existingProduct = state.cart.find((item) => item.id1 === id1);
             if (existingProduct) {
                 alert("Product already added!");
             } else {
            
-                state.cart.push({ id, name: name1, price: price1, image: image1, type: type1, qnty: 1 });
+                state.cart.push({ id1, name1: name1, price1: price1, image1: image1, type1: type1, qnty1: 1 });
             }
         },
     

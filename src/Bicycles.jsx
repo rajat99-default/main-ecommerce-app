@@ -56,7 +56,7 @@ const Bicycles = () => {
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
-                    <p id="bikepriceb" >{key.price}</p>
+                    <p id="bikepriceb" >${key.price}</p>
                     <button onClick={() => { dispatch(addBicycleToCart({ id: key.id, name: key.name, price: key.price, image: key.image, type: key.type })) }} id="addtocartb" >ADD TO CART</button>
                 </div>
             </div>

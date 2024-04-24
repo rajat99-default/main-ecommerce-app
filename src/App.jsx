@@ -5,6 +5,7 @@ import Bicycles from "./Bicycles"
 import Accessories from "./Accessories"
 import CartItem from "./CartItem"
 import Buynow from "./Buynow"
+import PaymentDone from "./PaymentDone"
 // import Slider from "./Slider"
 
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="accessories" element={<Accessories/>} />
           <Route path="cartitem" element={<CartItem/>} />
           <Route path="buynow" element={<Buynow/>} />
+          <Route path="paydone" element={<PaymentDone/>}  />
           
         </Route>
       </Routes>

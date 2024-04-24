@@ -1,7 +1,44 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CashOnDelivery from "./CashOnDelivery";
+import Upi from "./Upi";
+import Card from "./Card";
+import Banking from "./Banking";
+import { useState } from "react";
+
+import { useNavigate } from "react-router-dom";
+
 
 const Buynow = () => {
+
+  const [paymethod, setPaymethod] = useState("");
+  const navigate = useNavigate();
+
+  const handlePayMethod = (e) => {
+    let method = e.target.value;
+
+    if (method === "cashPay") {
+      setPaymethod(<CashOnDelivery />)
+    }
+    if (method === "UPIPay") {
+      setPaymethod(<Upi />)
+    }
+    if (method === "CardPay") {
+      setPaymethod(<Card />)
+    }
+    if (method === "BankingPay") {
+      setPaymethod(<Banking />)
+    }
+
+  }
+
+
+  const paymentDone = () => {
+
+    navigate("/paydone");
+  }
+
+
   return (
     <>
       <div id='navbarbicycles' >
@@ -36,9 +73,50 @@ const Buynow = () => {
       </div>
 
       <div>
-        <input type='text' placeholder='Enter your name' style={{borderTop:'none',borderRight:'none',borderLeft:'none',borderBottom:'0.1px solid black',width:'800px',marginLeft:'70px',marginTop:'100px',fontSize:'20px'}} />
-        <input type='text' placeholder='Enter Address' style={{borderTop:'none',borderRight:'none',borderLeft:'none',borderBottom:'0.1px solid black',width:'800px',marginLeft:'70px',marginTop:'30px',fontSize:'20px'}} />
+        <input type='text' placeholder='Enter Your Name' id='EnterName'  />
+        <br/>
+        <input type='text' placeholder='Enter Phone Number' id='EnterPhone'  />
+        <br/>
+        <input type='text' placeholder='Enter Zip Code' id='EnterZip'  />
+        <br/>
+        <input type='text' placeholder='Enter State/Province' id='EnterState'  />
+        <br/>
+        <input type='text' placeholder='Enter Address' id='EnterAdd'  />
+        <br/>
       </div>
+
+
+      <div id='wholePayment'  >
+
+        
+          <h1 id='SelectPayment'  > Select Your Payement Method</h1>
+      </div>
+
+      <div id='wholePayment2'  >
+
+          <input type="radio" name="m1" value="cashPay" onClick={handlePayMethod} /> Cash On Delivery
+          <br/>
+          <input type="radio" name="m1" value="UPIPay" onClick={handlePayMethod} /> UPI/Phone Pe
+          <br/>
+          <input type="radio" name="m1" value="CardPay" onClick={handlePayMethod} /> Credit/Debit Card
+          <br/>
+          <input type="radio" name="m1" value="BankingPay" onClick={handlePayMethod} /> Internet Banking
+          <br/>
+      </div>
+          
+
+          {paymethod}
+
+        
+
+     
+        <button id='makePayment'
+          onClick={() => { paymentDone() }}
+
+        > Make Payment</button>
+   
+
+
 
     </>
   )

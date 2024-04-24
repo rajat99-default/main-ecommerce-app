@@ -25,7 +25,7 @@ const CartItem = () => {
           <button id="cartqtyminus"  onClick={() => { dispatch(removeQTY({ id: key.id })) }}> - </button>
         </td>
         <td id="carttotalprice"  >
-          {key.price * key.qnty}
+          {netAmount}
         </td>
         <td>
           <button id="cartremoval"  onClick={() => { dispatch(removeItem(key.id)) }}>Remove</button>
@@ -77,6 +77,10 @@ const CartItem = () => {
 
 
       <div id="mainbodycart"  >
+      <Link to="/buynow"  >
+      
+        <button   id="buynow1"  > Proceed for Payment </button>
+      </Link>
 
         <div id="tablecart"  >
           <div id="tablecartheading">Cart</div>
@@ -96,10 +100,6 @@ const CartItem = () => {
 
       </div>
 
-      <Link to="/buynow"  >
-      
-        <button   id="buynow1"  > Buy Now </button>
-      </Link>
       
     </>
   )

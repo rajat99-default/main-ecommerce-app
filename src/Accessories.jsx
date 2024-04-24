@@ -64,8 +64,8 @@ const Accessories = () => {
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                     </div>
-                    <p id="bikeprice1a">{key.price1}</p>
-                    <button onClick={()=>{dispatch(addAccessoryToCart({id:key.id, name:key.name, price:key.price, image:key.image, type:key.type }))}}  id="addtocarta" >ADD TO CART</button>
+                    <p id="bikeprice1a">${key.price1}</p>
+                    <button onClick={()=>{dispatch(addAccessoryToCart({id1:key.id1, name1:key.name1, price1:key.price1, image1:key.image1, type1:key.type1 }))}}  id="addtocarta" >ADD TO CART</button>
                     <div id="sizesa">
                         <button id="La">&nbsp;L&nbsp;</button>
                         <button>&nbsp;M&nbsp;</button>

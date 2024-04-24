@@ -80,6 +80,7 @@
     color: white;
     font-weight: 360;
     font-family: "Racing Sans One", sans-serif;
+    font-family: "Racing Sans One", sans-serif;
     margin-top: 35px;
     margin-left: 43px;
 }
@@ -1350,7 +1351,10 @@
 
 
 #cartTable{
-  width: 100%;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-size: 22px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
@@ -1369,12 +1373,46 @@
 }
 
 #maincartitems td{
-    padding: 50px;
+    padding: 40px;
 }
 #maincartitems {
     /* padding: 50px; */
     border-bottom: 1px solid black;
 }
+
+
+#cartqtyplus{
+    flex: 0.1 1;
+    border: 0.1px solid rgb(224, 200, 200);
+    
+    margin: 0 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(116, 110, 110);
+    background-color: white;
+    padding: 3px 9px 3px 9px;
+    transition: border-color 0.5s ease;
+    background-color: #df453e;
+    color: white;
+    font-size: 22px;
+}
+
+
+#cartqtyminus{
+    flex: 0.1 1;
+    border: 0.1px solid rgb(224, 200, 200);
+    
+    margin: 0 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(116, 110, 110);
+    background-color: white;
+    padding: 3px 10px 3px 10px;
+    transition: border-color 0.5s ease;
+    background-color: #df453e;
+    color: white;
+    font-size: 22px;
+}
+
+
 
 #cartproduct{
     padding-right: 70px;
@@ -1387,11 +1425,11 @@
     color: white;
     background-color: #df453e;
     position: absolute;
-    padding: 20px 25px 20px 25px;
+    padding: 15px 10px 15px 10px;
     font-weight: 700;
-    font-size: 20px;
-    margin-top: -100px;
-    margin-left: 580px;
+    font-size: 16px;
+    margin-top: 77px;
+    margin-left: 1020px;
     z-index: 4;
 }
 /* ==========================================CART  Main Body================================================ */
@@ -1497,5 +1535,126 @@
   
 
 
+
+/* =============================MEDIA QUERY END=============================== */
+
+
+/* =============================CHECKOUT PAGE START=============================== */
+
+
+#EnterName{
+    border: none;
+    border-bottom: 0.5px solid black;
+    width: 300px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 50px   ;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+#EnterName:hover{
+    border-bottom-color: #ec150a;
+}
+#EnterPhone:hover{
+    border-bottom-color: #ec150a;
+}
+#EnterAdd:hover{
+    border-bottom-color: #ec150a;
+}
+#EnterState:hover{
+    border-bottom-color: #ec150a;
+}
+#EnterZip:hover{
+    border-bottom-color: #ec150a;
+    
+}
+
+
+#EnterPhone{
+    transition: border-bottom-color 0.3s ease-in-out;
+    border: none;
+    border-bottom: 0.1px solid black;
+    width: 250px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 50px   ;
+}
+#EnterAdd{
+    border: none;
+    transition: border-bottom-color 0.3s ease-in-out;
+    border-bottom: 0.1px solid black;
+    width: 500px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 50px   ;
+}
+#EnterState{
+    border: none;
+    transition: border-bottom-color 0.3s ease-in-out;
+    border-bottom: 0.1px solid black;
+    width: 335px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 50px   ;
+}
+#EnterZip{
+    border: none;
+    transition: border-bottom-color 0.3s ease-in-out;
+    border-bottom: 0.1px solid black;
+    width: 170px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 50px   ;
+}
+
+#SelectPayment{
+    /* margin-top: 800px; */
+    margin-top: -390px;
+    margin-left: 370px;
+    font-family: "Racing Sans One", sans-serif;
+    position: absolute;
+    font-weight: 400;
+}
+
+
+
+
+#wholePayment{
+    margin-left: 300px;
+    /* position: absolute; */
+}
+
+
+#wholePayment2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+    margin-top: -300px;
+    margin-left: 670px;
+}
+
+
+#makePayment{
+    border: none;
+    color: white;
+    background-color: #df453e;
+    position: absolute;
+    padding: 15px 20px 15px 20px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-left: 850px;
+    z-index: 4;
+}
+
+
+
+#carttype{
+    /* font-family: "Racing Sans One", sans-serif; */
+}
+
+#maincartitems{
+    font-family: "Racing Sans One", sans-serif;
+
+}
 
 /* =============================MEDIA QUERY END=============================== */

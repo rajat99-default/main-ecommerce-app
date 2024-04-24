@@ -1,6 +1,18 @@
 @media screen and (width: 1920px) and (height: 1080px) {
     #bgImage {
-        max-width: 900px;
+        max-width: 875px;
     }
+    
+    #reddiv{
+        max-width: 500px;
+        margin-left: 400px;
+
+    }
+    #blackdiv{
+        max-width: 400px;
+    }
+
+
+
   }
   
