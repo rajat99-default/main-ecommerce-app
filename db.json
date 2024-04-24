@@ -32,28 +32,42 @@
   "accessories": [
     {
       "id1": "10",
-      "type1": "Accessories",
+      "type1": "Gloves",
       "name1": "Bicycle Gloves Blue",
       "price1": "$27.00 – $35.00",
       "image1": "g1.jpg"
     },
     {
       "id1": "20",
-      "type1": "Accessories",
+      "type1": "Gloves",
       "name1": "Bicycle Gloves Gold",
       "price1": "$30.00 – $50.00",
       "image1": "g2.jpg"
     },
     {
       "id1": "30",
-      "type1": "Accessories",
+      "type1": "Gloves",
       "name1": "Bicycle Gloves Pink",
       "price1": "$25.00 – $32.00",
       "image1": "g3.jpg"
     },
     {
       "id1": "40",
-      "type1": "Accessories",
+      "type1": "Helmet",
+      "name1": "Bicycle Helmet Green ",
+      "price1": "$125.00 – $232.00",
+      "image1": "h1.jpg"
+    },
+    {
+      "id1": "50",
+      "type1": "Helmet",
+      "name1": "Bicycle Helmet blue",
+      "price1": "$125.00 – $162.00",
+      "image1": "h2.jpg"
+    },
+    {
+      "id1": "60",
+      "type1": "Gloves",
       "name1": "Bicycle Gloves Red",
       "price1": "$92.00 – $98.00",
       "image1": "g4.jpg"

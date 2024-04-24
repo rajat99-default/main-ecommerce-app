@@ -34,6 +34,12 @@ const Buynow = () => {
         </Link>
 
       </div>
+
+      <div>
+        <input type='text' placeholder='Enter your name' style={{borderTop:'none',borderRight:'none',borderLeft:'none',borderBottom:'0.1px solid black',width:'800px',marginLeft:'70px',marginTop:'100px',fontSize:'20px'}} />
+        <input type='text' placeholder='Enter Address' style={{borderTop:'none',borderRight:'none',borderLeft:'none',borderBottom:'0.1px solid black',width:'800px',marginLeft:'70px',marginTop:'30px',fontSize:'20px'}} />
+      </div>
+
     </>
   )
 }
